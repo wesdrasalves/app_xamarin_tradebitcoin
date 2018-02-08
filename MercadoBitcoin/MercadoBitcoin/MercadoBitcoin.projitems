@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{d7ec9bbe-1310-4585-9000-d351d4203148}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MercadoBitcoin</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)API\DTO\DTOMBCoinData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\DTO\DTOMB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\DTO\DTOMBMyFunds.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\DTO\DTOMBOperation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\DTO\DTOMBOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\DTO\DTOMBOrderBook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\MBAcess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\MBEnumerables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\MBUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\MPTapi.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)API\TempStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CoinData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\OrdersViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TradeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BuyOrdersPage.xaml.cs">
+      <DependentUpon>BuyOrdersPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableRangeCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MessengingCenterAlert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Main.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SellOrdersPage.xaml.cs">
+      <DependentUpon>SellOrdersPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TradePage.xaml.cs">
+      <DependentUpon>TradePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BuyOrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SellOrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TradePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

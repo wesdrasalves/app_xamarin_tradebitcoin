@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="MercadoBitcoin.Views.BuyOrdersPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Filter" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+                <ListView x:Name="ListViewBuy"
+                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  
+				ItemsSource="{Binding ListBuyCoin}"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding RefreshCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50*" />
+                                        <ColumnDefinition Width="50*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Volume}"
+                                        Grid.Column="0" FontSize="16" Margin="10, 5, 0, 5"/>
+                                    <Label Text="{Binding Value}"
+                                        Grid.Column="1" FontSize="16" Margin="10, 5, 0, 5"/>
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

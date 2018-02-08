@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MercadoBitcoin.Views.SettingsPage"
+             x:Name="OrdersPage"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Public Key"></Label>
+            <Editor HeightRequest="20" x:Name="PublicKey"></Editor>
+            <Label Text="Private Key"></Label>
+            <Entry x:Name="PrivateKey"></Entry>
+            <Label Text="PIN"></Label>
+            <Entry x:Name="Pin" WidthRequest="10"></Entry>
+
+            <Button x:Name="Save" Text="Buy" WidthRequest="100" BorderWidth="1" Clicked="Save_Clicked" >
+                <Button.TextColor>
+                    <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                </Button.TextColor>
+                <Button.BorderColor>
+                    <OnPlatform x:TypeArguments="Color" iOS="White"/>
+                </Button.BorderColor>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
