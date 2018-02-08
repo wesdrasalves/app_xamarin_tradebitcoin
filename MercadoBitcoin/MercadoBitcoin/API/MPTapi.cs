@@ -66,7 +66,7 @@ namespace Dotend.MBTrade
             this.PublicKey = pPublicKey;
             this.Pin = pPin;
 
-            this.Pin = "5992";
+            this.Pin = "";
         }
 
 

@@ -6,8 +6,8 @@ namespace MercadoBitcoin.Helpers
 {
     public static class Settings
     {
-        public const string PublicKey =  "f5a144afd52dab762047fcd7607b5445";
-        public const string PrivateKey = "1ee74121d6205609cb6b42d1f56fc1ea82f8aac6b838431794d20a5d13dc00ce";
+        public const string PublicKey =  "";
+        public const string PrivateKey = "";
 
         public const double VALUE_BIG_UP = 1500; 
         public const double VALUE_BIG_DOWN = 1500;
