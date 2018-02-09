@@ -1,4 +1,5 @@
-﻿using MercadoBitcoin.Views;
+﻿using MercadoBitcoin.Helpers;
+using MercadoBitcoin.Views;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,8 +18,8 @@ namespace MercadoBitcoin
 
 		public static void SetMainPage()
 		{
-
-            Current.MainPage = new Main();
+            
+            Current.MainPage = new PINAccess();
                 /*TabbedPage
                 {
                 Children =

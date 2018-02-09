@@ -48,6 +48,14 @@ namespace Dotend.MBTrade
 
         public void ReloadDatas()
         {
+            this.ListMyOrders = new List<DTOMBOrder>();
+            this.ListBuy = new List<DTOMBCoinData>();
+            this.ListSell = new List<DTOMBCoinData>();
+            this.Myfunds = null;
+
+            if (MBTAPI.Instance.StartedInstance)
+                return;
+
             this.ListMyOrders = MBTAPI.Instance.getMyOpenOrders( MBEnumerables.CoinType.Bit);
 
             DTOMBOrderBook _orderBooks = MBTAPI.Instance.getLastOrders(); ;

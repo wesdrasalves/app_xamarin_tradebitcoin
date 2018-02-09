@@ -51,9 +51,9 @@ namespace MercadoBitcoin.Droid
                     double _value = TempStorage.Instance.ListBuy[0].Value;
 
                     string.Format(_msg, MBUtils.Instance.OldValueBuy, _value);
-                }
 
-                Notificate("Bitcoin Down", _msg, 1);
+                    Notificate("Bitcoin Down", _msg, 1);
+                }
             }
 
             if (MBUtils.Instance.CheckBigUp())
@@ -66,9 +66,9 @@ namespace MercadoBitcoin.Droid
                     double _value = TempStorage.Instance.ListSell[0].Value;
 
                     string.Format(_msg, MBUtils.Instance.OldValueSell, _value);
-                }
 
-                Notificate("Bitcoin Up", _msg, 2);
+                    Notificate("Bitcoin Up", _msg, 2);
+                }
             }
 
             if (MBUtils.Instance.CheckBuy())

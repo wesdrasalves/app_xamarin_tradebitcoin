@@ -47,7 +47,7 @@ namespace MercadoBitcoin.ViewModels
 
         private OrdersViewModel()
         {
-            Title = "Buy e Sell";
+            Title = "Public Orders";
             ListBuyCoin = new ObservableRangeCollection<DTOMBCoinData>();
             ListSellCoin = new ObservableRangeCollection<DTOMBCoinData>();
             isOnFilter = false;
@@ -81,21 +81,25 @@ namespace MercadoBitcoin.ViewModels
 
                 this.ListSellCoin.Clear();
                 this.ListBuyCoin.Clear();
-                if(this.isOnFilter)
-                {
 
-                    this.ListSellCoin.AddRange((from _o in _orderBooks.asks
-                                                where _o.Volume >= Settings.FILTER_BIG_ORDERS
-                                                select _o).ToList());
-                    this.ListBuyCoin.AddRange((from _o in _orderBooks.bids
-                                               where _o.Volume >= Settings.FILTER_BIG_ORDERS
-                                               select _o).ToList());
-                }
-                else
-                {
-                    this.ListSellCoin.AddRange(_orderBooks.asks);
-                    this.ListBuyCoin.AddRange(_orderBooks.bids);
-                }
+                if (_orderBooks != null && 
+                    _orderBooks.asks != null &&
+                    _orderBooks.bids != null)
+                    if(this.isOnFilter)
+                    {
+
+                        this.ListSellCoin.AddRange((from _o in _orderBooks.asks
+                                                    where _o.Volume >= Settings.FILTER_BIG_ORDERS
+                                                    select _o).ToList());
+                        this.ListBuyCoin.AddRange((from _o in _orderBooks.bids
+                                                   where _o.Volume >= Settings.FILTER_BIG_ORDERS
+                                                   select _o).ToList());
+                    }
+                    else
+                    {
+                        this.ListSellCoin.AddRange(_orderBooks.asks);
+                        this.ListBuyCoin.AddRange(_orderBooks.bids);
+                    }
 
             }
             catch (Exception ex)

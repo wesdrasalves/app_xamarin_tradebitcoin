@@ -35,11 +35,17 @@ namespace Dotend.MBTrade
                 if (_instance == null)
                 {
                     _instance = new MBUtils();
-                    _instance._lastDateTimeUpdate = DateTime.Now.AddSeconds(-(Settings.SECONDS_CHECK_UPDATE + 1));
-                    _instance.UpdateAllValues();
+                    _instance.Restart();
                 }
+
                 return _instance;
             }
+        }
+
+        public void Restart()
+        {
+            _instance._lastDateTimeUpdate = DateTime.Now.AddSeconds(-(Settings.SECONDS_CHECK_UPDATE + 1));
+            _instance.UpdateAllValues();
         }
 
         private void UpdateAllValues()
@@ -88,6 +94,7 @@ namespace Dotend.MBTrade
                     OldValueBit = TempStorage.Instance.Myfunds.balanceBTCAvaliable;
                     return true;
                 }
+
             return false;
         }
 

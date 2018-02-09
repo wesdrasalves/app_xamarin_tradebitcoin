@@ -26,6 +26,8 @@ namespace MercadoBitcoin.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::MercadoBitcoin.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::MercadoBitcoin.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::MercadoBitcoin.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2203,8 +2205,8 @@ namespace MercadoBitcoin.Droid
 			// aapt resource value: 0x7f0200a1
 			public const int mr_ic_play_light = 2130837665;
 			
-			// aapt resource value: 0x7f0200a5
-			public const int notification_template_icon_bg = 2130837669;
+			// aapt resource value: 0x7f0200a6
+			public const int notification_template_icon_bg = 2130837670;
 			
 			// aapt resource value: 0x7f0200a2
 			public const int profile_generic = 2130837666;
@@ -2214,6 +2216,9 @@ namespace MercadoBitcoin.Droid
 			
 			// aapt resource value: 0x7f0200a4
 			public const int slideout = 2130837668;
+			
+			// aapt resource value: 0x7f0200a5
+			public const int trash = 2130837669;
 			
 			static Drawable()
 			{
@@ -2949,6 +2954,12 @@ namespace MercadoBitcoin.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f080027
+			public const int ApplicationName = 2131230759;
+			
+			// aapt resource value: 0x7f080026
+			public const int Hello = 2131230758;
+			
 			// aapt resource value: 0x7f08000f
 			public const int abc_action_bar_home_description = 2131230735;
 			
@@ -3006,11 +3017,11 @@ namespace MercadoBitcoin.Droid
 			// aapt resource value: 0x7f080021
 			public const int abc_toolbar_collapse_description = 2131230753;
 			
-			// aapt resource value: 0x7f08002a
-			public const int app_description = 2131230762;
+			// aapt resource value: 0x7f08002c
+			public const int app_description = 2131230764;
 			
-			// aapt resource value: 0x7f080028
-			public const int app_name = 2131230760;
+			// aapt resource value: 0x7f08002a
+			public const int app_name = 2131230762;
 			
 			// aapt resource value: 0x7f080023
 			public const int appbar_scrolling_view_behavior = 2131230755;
@@ -3066,26 +3077,26 @@ namespace MercadoBitcoin.Droid
 			// aapt resource value: 0x7f08000e
 			public const int mr_user_route_category_name = 2131230734;
 			
-			// aapt resource value: 0x7f08002b
-			public const int notification_text = 2131230763;
+			// aapt resource value: 0x7f08002d
+			public const int notification_text = 2131230765;
 			
-			// aapt resource value: 0x7f08002c
-			public const int restart_timer = 2131230764;
-			
-			// aapt resource value: 0x7f080027
-			public const int restart_timestamp_service_button_text = 2131230759;
+			// aapt resource value: 0x7f08002e
+			public const int restart_timer = 2131230766;
 			
 			// aapt resource value: 0x7f080029
-			public const int service_started = 2131230761;
+			public const int restart_timestamp_service_button_text = 2131230761;
+			
+			// aapt resource value: 0x7f08002b
+			public const int service_started = 2131230763;
 			
 			// aapt resource value: 0x7f080022
 			public const int status_bar_notification_info_overflow = 2131230754;
 			
-			// aapt resource value: 0x7f08002d
-			public const int stop_service = 2131230765;
+			// aapt resource value: 0x7f08002f
+			public const int stop_service = 2131230767;
 			
-			// aapt resource value: 0x7f080026
-			public const int stop_timestamp_service_button_text = 2131230758;
+			// aapt resource value: 0x7f080028
+			public const int stop_timestamp_service_button_text = 2131230760;
 			
 			static String()
 			{

@@ -39,15 +39,28 @@ namespace Dotend.MBTrade
         private int _codeError;
         private static MBTAPI _instance = null;
 
+        public bool StartedInstance { get; private set; }
+
+
         public static MBTAPI Instance
         {
             get
             {
                 if (MBTAPI._instance == null)
-                    MBTAPI._instance = new MBTAPI(Settings.PrivateKey, Settings.PublicKey, "");
+                {
+                    MBTAPI._instance = new MBTAPI("", "", "");
+                    MBTAPI._instance.StartedInstance = true;
+                }
 
                 return MBTAPI._instance;
             }
+        }
+
+        public static void RenewInstance(string PrivateKey, string PublicKey, string Pin)
+        {
+            MBTAPI._instance = new MBTAPI(PrivateKey, PublicKey, Pin);
+            MBTAPI._instance.StartedInstance = false;
+            MBUtils.Instance.Restart();
         }
 
         /// <summary>
@@ -66,7 +79,6 @@ namespace Dotend.MBTrade
             this.PublicKey = pPublicKey;
             this.Pin = pPin;
 
-            this.Pin = "";
         }
 
 

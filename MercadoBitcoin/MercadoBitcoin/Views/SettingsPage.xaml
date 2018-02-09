@@ -6,21 +6,21 @@
              >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Public Key"></Label>
-            <Editor HeightRequest="20" x:Name="PublicKey"></Editor>
-            <Label Text="Private Key"></Label>
-            <Entry x:Name="PrivateKey"></Entry>
-            <Label Text="PIN"></Label>
-            <Entry x:Name="Pin" WidthRequest="10"></Entry>
+            <Label Text="Configurations API"  FontSize="20"  VerticalOptions="Center" Margin="10, 5, 0, 10"></Label>
 
-            <Button x:Name="Save" Text="Buy" WidthRequest="100" BorderWidth="1" Clicked="Save_Clicked" >
-                <Button.TextColor>
-                    <OnPlatform x:TypeArguments="Color" iOS="White"/>
-                </Button.TextColor>
-                <Button.BorderColor>
-                    <OnPlatform x:TypeArguments="Color" iOS="White"/>
-                </Button.BorderColor>
+            <Label Text="Public Key" VerticalOptions="Center"></Label>
+            <Entry x:Name="PublicKey" VerticalOptions="Center" Margin="0, 5, 0, 10"></Entry>
+            <Label Text="Private Key" VerticalOptions="Center"></Label>
+            <Entry x:Name="PrivateKey" VerticalOptions="Center" Margin="0, 5, 0, 10"></Entry>
+
+            <Button x:Name="Save" Text="Save" Margin="0, 20, 0, 0" VerticalOptions="Center" HorizontalOptions="Center" BorderWidth="1" Clicked="Save_Clicked" >
             </Button>
+
+            <Button x:Name="Sair" Text="Exit" Margin="0, 20, 0, 0"  BorderWidth="1" Clicked="Sair_Clicked" VerticalOptions="Center" HorizontalOptions="Center">
+            </Button>
+            <Button Image="@drawable/trash" x:Name="Clear" Clicked="Clear_Clicked"  VerticalOptions="Center" HorizontalOptions="Center" >
+            </Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

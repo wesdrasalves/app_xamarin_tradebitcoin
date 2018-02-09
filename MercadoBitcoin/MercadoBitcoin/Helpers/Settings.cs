@@ -6,8 +6,8 @@ namespace MercadoBitcoin.Helpers
 {
     public static class Settings
     {
-        public const string PublicKey =  "";
-        public const string PrivateKey = "";
+        public const string FILE_STORE = "MBData.wa";
+        public const string SEPARATOR_DATA = "#$|$#";
 
         public const double VALUE_BIG_UP = 1500; 
         public const double VALUE_BIG_DOWN = 1500;
