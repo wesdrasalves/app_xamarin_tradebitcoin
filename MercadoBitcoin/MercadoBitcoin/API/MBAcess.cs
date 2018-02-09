@@ -26,8 +26,8 @@ namespace Dotend.MBTrade
         #region "Properties"
 
         private string _privateKey = "";
-        private string _publicKey = "f5a144afd52dab762047fcd7607b5445";
-        private string _pin = "5992";
+        private string _publicKey = "";
+        private string _pin = "";
         private string _error;
 
         internal string Error
